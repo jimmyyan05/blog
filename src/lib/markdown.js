@@ -49,6 +49,7 @@ export function getAllPosts() {
     // 使用gray-matter解析文章的元數據
     // matter是用來拆解檔案內容的工具，不能直接處理檔案路徑，所以要先讀取檔案內容
     const matterResult = matter(fileContents);
+    // console.log("matterResult", matterResult);
 
     // 計算閲讀時間
     const readTime = readingTime(matterResult.content);
@@ -73,8 +74,6 @@ export function getAllPosts() {
   });
 }
 
-
-
 //讀取單篇文章的markdown檔案
 export async function getPostData(slug) {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
@@ -88,7 +87,10 @@ export async function getPostData(slug) {
 
   // 使用remark將markdown轉換為HTML
   const processedContent = await remark()
+    //消毒sanitize，意思是會自動幫你「把 <script>、<style>、<iframe> 等危險標籤移除」。這裡是不做任何防範，所以設為false
+    //它的作用是將 Markdown 內容轉換為 HTML 格式。
     .use(html, { sanitize: false })
+    //它會根據加載的插件（例如 remark-html）對內容進行轉換
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
