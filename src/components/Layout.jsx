@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import Image from "next/image";
 
 export default function Layout({ children, home }) {
   const siteTitle = "Xander's Blog";
@@ -16,15 +17,28 @@ export default function Layout({ children, home }) {
       <header className="header">
         <div className="header-inner">
           {home ? (
-            <h1 className="heading">{siteTitle}</h1>
+            <h3 className="heading">{siteTitle}</h3>
           ) : (
-            <h2 className="heading">
+            <h3 className="heading">
               <Link href="/">{siteTitle}</Link>
-            </h2>
+            </h3>
           )}
-          <ThemeToggle />
+
+          <div className="avatar-block">
+            <ThemeToggle />
+            <span className="by-text">by</span>
+            <a href="/about">
+              <Image
+                src="/images/avatar.JPG"
+                alt="Xander"
+                width={36}
+                height={36}
+                className="avatar-img"
+              />
+            </a>
+          </div>
         </div>
-        <p className="description">記錄我對程式設計的思考和發現</p>
+        {/* <p className="description">記錄我對程式設計的思考和發現</p> */}
       </header>
       <main>{children}</main>
       {!home && (

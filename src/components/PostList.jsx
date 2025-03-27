@@ -10,13 +10,16 @@ export default function PostList({ posts }) {
           <article>
             <header>
               <h3 className="post-title">
-                <Link href={`/posts/${slug}`}>{title}</Link>
+                <Link href={`/posts/${slug}`}>
+                  {" "}
+                  <span className="gradient-text">{title}</span>
+                </Link>
               </h3>
               <small className="post-meta">
                 {formatDate(date)} • {readTime}
               </small>
+              <p className="post-excerpt">{description}</p>
             </header>
-            <p className="post-excerpt">{description}</p>
           </article>
         </li>
       ))}

@@ -24,6 +24,7 @@ export default function PostBody({ content }) {
 
   return (
     <div
+      className="post-content"
       ref={contentRef} // 綁定 ref
       //下面寫法其實等同於element.innerHTML = "<h1>Hello</h1>";
       dangerouslySetInnerHTML={{ __html: content }}

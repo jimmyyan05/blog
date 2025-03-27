@@ -1,14 +1,14 @@
 ---
-title: "Hello World - 我的第一篇博客文章"
+title: "Hello World - 我的第一篇文章"
 date: "2025-03-25"
-description: "這是我的第一篇博客文章，介紹了我開始寫博客的原因和未來計劃。"
+description: "這是我的第一篇文章，介紹了我開始寫blog的原因和未來計劃。"
 ---
 
-歡迎來到我的博客！這是我的第一篇文章，作為程序員，當然要從"Hello World"開始。
+歡迎來到我的 blog！這是我的第一篇文章，作為前端小白，當然要從"Hello World"開始。
 
-## 為什麼開始寫博客？
+## 為什麼開始寫 blog？
 
-寫博客對我來説是一種思考和分享的方式。通過寫作，我可以：
+寫 blog 對我來説是一種思考和分享的方式。通過寫作，我可以：
 
 1. 整理自己的知識體系
 2. 分享技術心得與發現
@@ -27,3 +27,5 @@ function greeting(name) {
 // 調用函數
 console.log(greeting("World")); // 輸出: Hello, World!
 ```
+
+Let’s run `npm audit` to see what’s up.
