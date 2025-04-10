@@ -163,8 +163,9 @@ header {
 }
 
 /* 設定code blocks */
-code.language-javascript.hljs {
+code.hljs {
   border-radius: 25px;
+  padding: 10px;
 }
 
 /* 行內 code：套用淡黃底樣式 */
@@ -177,6 +178,17 @@ span code {
   font-size: 0.95em;
   color: #1a1a1a;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+table td code {
+  background: rgba(255, 229, 100, 0.2);
+  padding: 0.2em 0.4em;
+  border-radius: 0.3em;
+  font-size: 0.95em;
+  color: #1a1a1a;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 /* 設定header */

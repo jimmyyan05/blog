@@ -3,12 +3,15 @@
 import { useEffect, useRef } from "react";
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
+import xml from "highlight.js/lib/languages/xml";
+
 // 引入樣式，選擇一個您喜歡的主題
 import "highlight.js/styles/atom-one-dark.css"; // 或其他主題
 
 // 註冊需要的語言
 hljs.registerLanguage("javascript", javascript);
-
+hljs.registerLanguage("xml", xml);
+hljs.registerLanguage("vue", xml);
 export default function PostBody({ content }) {
   const contentRef = useRef(null); // 使用 useRef 來引用 DOM 元素
 

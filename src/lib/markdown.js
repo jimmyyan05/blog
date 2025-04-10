@@ -6,6 +6,7 @@ import matter from "gray-matter";
 // 用於將 Markdown 內容轉換為 HTML。
 import { remark } from "remark";
 import html from "remark-html";
+import remarkGfm from "remark-gfm";
 // 用來計算文章的閱讀時間。
 import readingTime from "reading-time";
 
@@ -90,6 +91,7 @@ export async function getPostData(slug) {
     //消毒sanitize，意思是會自動幫你「把 <script>、<style>、<iframe> 等危險標籤移除」。這裡是不做任何防範，所以設為false
     //它的作用是將 Markdown 內容轉換為 HTML 格式。
     .use(html, { sanitize: false })
+    .use(remarkGfm)
     //它會根據加載的插件（例如 remark-html）對內容進行轉換
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
