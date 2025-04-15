@@ -95,14 +95,15 @@ header {
   list-style: none;
   padding: 0;
   margin: 0;
-  &:hover {
-    transition: all 0.3s ease;
-    transform: scale(1.02);
-  }
+  
 }
 
 .post-item {
   margin-bottom: 2.5rem;
+  &:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.02);
+  }
 }
 
 .post-title {

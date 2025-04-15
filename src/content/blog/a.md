@@ -2,6 +2,7 @@
 title: "為何我要轉職"
 date: "2025-03-24"
 description: "這是我的第一篇文章，介紹了我開始寫blog的原因和未來計劃。"
+tag: "LeetCode"
 ---
 
 歡迎來到我的 blog！這是我的第一篇文章，作為前端小白，當然要從"Hello World"開始。
@@ -29,3 +30,4 @@ console.log(greeting("World")); // 輸出: Hello, World!
 ```
 
 Let’s run `npm audit` to see what’s up.
+
